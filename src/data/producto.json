@@ -1,0 +1,10 @@
+[
+    {"id": 1, "imagen": "../src/img-aperitivo/fernet-branca-1lt.jpg","nombre":"FERNET BRANCA", "categoria": "fernet", "descripcion": "Fernet Branca 1 lt", "precio": "9500"},
+    {"id": 2, "imagen": "../src/img-aperitivo/fernet-buhero-negro-700ml.jpg","nombre":"FERNET BUHERO NEGRO", "categoria": "fernet", "descripcion": "Fernet Buhero Negro 700 ml", "precio": "5000"},
+    {"id": 3, "imagen": "../src/img-aperitivo/ron-havana-añejo-750ml.png","nombre":"RON HAVANA AÑEJO", "categoria": "ron", "descripcion": "Ron Havana Añejo 750 ml", "precio": "6000"},
+    {"id": 4, "imagen": "../src/img-aperitivo/ron-havana-blanco-750ml.jpg","nombre":"RON HAVANA BLANCO", "categoria": "ron", "descripcion": "Ron Havana Blanco 750 ml", "precio": "5800"},
+    {"id": 5, "imagen": "../src/img-aperitivo/ron-havana-dorado-750ml.jpg","nombre":"RON HAVANA DORADO", "categoria": "ron", "descripcion": "Ron Havana Dorado 750 ml", "precio": "6400"},
+    {"id": 6, "imagen": "../src/img-aperitivo/whisky-johnnie-walker-blue-label.jpeg","nombre":"WHISKY JOHNNIE WALKER BLUE LABEL", "categoria": "whisky", "descripcion": "Johnnie Walker Blue Label 750 ml", "precio": "18000"},
+    {"id": 7, "imagen": "../src/img-aperitivo/wisky-johnnie-walker-black-label.jpeg","nombre":"WHISKY JOHNNIE WALKER BLACK LABEL", "categoria": "whisky", "descripcion": "Johnnie Walker Black Label 750 ml", "precio": "25000"},
+    {"id": 8, "imagen": "../src/img-aperitivo/wisky-johnnie-walker-red-label.jpg","nombre":"WHISKY JOHNNIE WALKER RED LABEL", "categoria": "whisky", "descripcion": "Johnnie Walker Red Label 750 ml", "precio": "15000"}
+]
