@@ -4,18 +4,23 @@ import ItemDetailContainer from './components/ItemListcontainer/ItemDetailContai
 import ItemListContainer from './components/ItemListcontainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar'
 import Cart from './components/CartWidget/Cart'
+import CartProvider from './context/CartContext'
+import FormPedido from './components/Form/FormPedido'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <NavBar/>
-      <Routes>
-        <Route exact path='/' element={<ItemListContainer/>} />
-        <Route path='/item/:id' element={<ItemDetailContainer/>} />
-        <Route path='/category/:categoria' element={<ItemListContainer/>} />
-        <Route exact path='/cart' element={<Cart/>} />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<ItemListContainer/>} />
+          <Route path="/item/:id" element={<ItemDetailContainer/>} />
+          <Route path="/category/:categoryId" element={<ItemListContainer/>} />
+          <Route exact path="/cart" element={<Cart/>} />
+          <Route exact path="/orden" element={<FormPedido/>}/>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   )
 }
 

@@ -1,15 +1,25 @@
 import React from 'react'
 import Item from './Item'
+import { Container } from '@chakra-ui/react'
 
-const ItemList = ({productos}) => {
+const ItemList = ({items}) => {
     return (
         <div>
-            {productos.length > 0 && productos.map ((prod) => {
-                return (
-                    <Item key={prod.id} producto={prod} />
-                )
-            })
-            }
+            <Container>
+                {items?.map((item) => (
+                    <Item 
+                    key={item.id}
+                    id={item.id}
+                    categoria={item.categoria}
+                    descripcion={item.descripcion}
+                    imagen={item.imagen}
+                    nombre={item.nombre}
+                    stock={item.stock}
+                    precio={item.precio}
+                    item={item}
+                    />
+                ))}
+            </Container>
         </div>
     )
 }

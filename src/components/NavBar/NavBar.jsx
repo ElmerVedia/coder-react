@@ -1,18 +1,18 @@
 
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
-import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem, Heading } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <div>
+        <Box>
             <Flex>
-                <Box p='6'>
-                    <Link to={'/'}>
-                        <h1>TuAperitivo</h1>
-                    </Link>
-                </Box>
+                <Link to={'/'}>
+                    <Heading>
+                        TuAperitivo
+                    </Heading>
+                </Link>
                 <Spacer />
                 <Menu>
                     <MenuButton>
@@ -21,30 +21,29 @@ const NavBar = () => {
                     <MenuList>
                         <MenuItem>
                             <Link to='/category/fernet'>
-                                <p>FERNET</p>
+                                FERNET
                             </Link>
                         </MenuItem>
                         <MenuItem>
                             <Link to='/category/ron'>
-                                <p>RON</p>
+                                RON
                             </Link>
                         </MenuItem>
                         <MenuItem>
                             <Link to='/category/whisky'>
-                                <p>WHISKY</p>
+                                WHISKY
                             </Link>
                         </MenuItem>
                     </MenuList>
                 </Menu>
                 <Spacer />
-                
-                <Box p='6' bg='green.400'>
-                    <Link to={"/cart"}>
-                        <CartWidget/>
-                    </Link>
-                </Box>
+                    <Box p='6' bg='green.400'>
+                        <Link to={"/cart"}>
+                            <CartWidget/>
+                        </Link>
+                    </Box>
             </Flex>
-        </div>
+        </Box>
     )
 }
 

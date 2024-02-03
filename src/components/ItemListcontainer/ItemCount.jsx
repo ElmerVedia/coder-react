@@ -1,18 +1,53 @@
-import { Button } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Button, ButtonGroup, IconButton, Center } from '@chakra-ui/react'
+import { useState, useContext } from 'react'
+import { AddIcon, MinusIcon} from '@chakra-ui/icons'
+import { CartContext } from '../../context/CartContext'
 
-const ItemCount = () => {
-    const [contador, setContador] = useState(0)
-    const message = () => {
-        contador !=0 ? alert("producto agregado al carrito") : alert('Tenes producto/s en el carrito')
+const ItemCount = ({id, nombre, precio, imagen}) => {
+    const [cart, setCart] = useContext(CartContext)
+    const [counter, setCounter] = useState(1)
+
+    const rest = () => {
+        if (counter > 0) {
+            setCounter(counter -1)
+        }else{
+            alert("El Carrito esta vacio")
+        }
     }
-    const sumar = () => contador < 15 && setContador(contador + 1)
-    const restar = () => contador > 0 && setContador(contador - 1)
+
+    const suma = () => {
+        setCounter(counter +1)
+    }
+
+    const addToCart = () => {
+        setCart((cartAtm) => {
+            const alrdyIn = cartAtm.find((item) => item.id === id)
+
+            if (alrdyIn) {
+                return cartAtm.map((item) => {
+                    if (then.id ===id) {
+                        return{...item, stock: item.stock + counter}
+                    }else{
+                        return item
+                    }
+                })
+            }else{
+                return [...cartAtm, {id, stock: counter, nombre, precio, imagen}]
+            }
+        })
+    }
+    
     return (
         <>
-            { contador > 0 ? <Button colorScheme='red' size='sm' onClick={restar}>Eliminar</Button> : <Button disabled>Eliminar</Button>}
-            <Button colorScheme='blue' size='sm' onClick={message}>Agregar a Carrito {contador}</Button>
-            { contador < 10 ? <Button colorScheme='green' size='sm' onClick={sumar}>Agregar</Button> : <Button disabled>Agregar</Button>}
+            <ButtonGroup size="md" isAttached variant="outline">
+                <IconButton icon={<MinusIcon />} onClick={rest} />
+                <Center>
+                    <Button onClick={() => addToCart()}colorScheme="green">
+                        Add to cart: {counter}
+                    </Button>
+                </Center>
+                <IconButton icon={<AddIcon />} onClick={suma} />
+            </ButtonGroup>
         </>
     )
 }
