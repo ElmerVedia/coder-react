@@ -11,7 +11,7 @@ const ItemDetail = ({items}) => {
 
     useEffect(() => {
         const db = getFirestore();
-        const licorRef = doc(db, "licor", '${id}');
+        const licorRef = doc(db, "licor", `${id}`);
 
         getDoc(licorRef).then((snapshot) => {
             if (snapshot.exists()) {

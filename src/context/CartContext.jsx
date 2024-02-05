@@ -1,8 +1,9 @@
-import {createContext, useState} from 'react'
-import Swal from 'sweetalert2'
+import {createContext, useState} from "react"
+import Swal from "sweetalert2"
 
 export const CartContext = createContext(null)
-export const CartProvider = ({children}) => {
+
+export const CartProvider = ( {children} ) => {
   const [cart, setCart] = useState([])
 
   const clearCart = () => {
@@ -13,7 +14,7 @@ export const CartProvider = ({children}) => {
 
     if (itemIndex !== -1) {
       const newCart = [...cart]
-      newCart[itemIndex], stock--;
+      newCart[itemIndex].stock--;
       if (newCart[itemIndex].stock === 0) {
         newCart.splice(itemIndex, 1)
       }
@@ -22,11 +23,11 @@ export const CartProvider = ({children}) => {
   }
 
   const increaseOne = (itemId) => {
-    const itemIndex = cart.findIndex((item) => item.id === item.id)
+    const itemIndex = cart.findIndex((item) => item.id === itemId)
 
     if(itemIndex !== 1) {
       const newCart = [...cart]
-      newCart[itemIndex].stock++
+      newCart[itemIndex].stock++;
 
       if (newCart[itemIndex].stock === 0) {
         newCart.splice(itemIndex, 1)
@@ -39,7 +40,7 @@ export const CartProvider = ({children}) => {
     if (!Array.isArray(cart) || cart.length === 0) {
       return 0
     }else{
-      const totalPrice = cart.reduce((acu, item) =>{
+      const totalPrice = cart.reduce((acu, item) => {
         if (
           typeof item.precio === "number" &&
           typeof item.stock === "number" &&
@@ -57,12 +58,12 @@ export const CartProvider = ({children}) => {
           return acu;
         }
       }, 0);
-      return totalPrice
+      return totalPrice;
     }
   }
 
   return (
-    <CartContext.Provider value={[cart, setCart, fullPrice, eraseOne, increaseOne, clearCart]}>
+    <CartContext.Provider value = {[cart, setCart, fullPrice, eraseOne, increaseOne, clearCart]}>
       {children}
     </CartContext.Provider>
   )

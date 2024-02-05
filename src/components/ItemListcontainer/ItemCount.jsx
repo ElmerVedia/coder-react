@@ -4,8 +4,8 @@ import { AddIcon, MinusIcon} from '@chakra-ui/icons'
 import { CartContext } from '../../context/CartContext'
 
 const ItemCount = ({id, nombre, precio, imagen}) => {
-    const [cart, setCart] = useContext(CartContext)
-    const [counter, setCounter] = useState(1)
+    const [cart, setCart] = useContext(CartContext);
+    const [counter, setCounter] = useState(1);
 
     const rest = () => {
         if (counter > 0) {
@@ -25,7 +25,7 @@ const ItemCount = ({id, nombre, precio, imagen}) => {
 
             if (alrdyIn) {
                 return cartAtm.map((item) => {
-                    if (then.id ===id) {
+                    if (then.id === id) {
                         return{...item, stock: item.stock + counter}
                     }else{
                         return item
@@ -43,7 +43,7 @@ const ItemCount = ({id, nombre, precio, imagen}) => {
                 <IconButton icon={<MinusIcon />} onClick={rest} />
                 <Center>
                     <Button onClick={() => addToCart()}colorScheme="green">
-                        Add to cart: {counter}
+                        Agregar a Carrito: {counter}
                     </Button>
                 </Center>
                 <IconButton icon={<AddIcon />} onClick={suma} />

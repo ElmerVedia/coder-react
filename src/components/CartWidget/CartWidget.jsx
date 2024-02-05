@@ -11,13 +11,13 @@ const CartWidget = () => {
   }
 
   useEffect(() => {
-    const keepCart  = localStorage.getItem('cart')
+    const keepCart  = localStorage.getItem(`cart`)
     if (keepCart) {
       setCart(JSON.parse(keepCart))
     }
   }, [setCart]);
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem(`cart`, JSON.stringify(cart));
   }, [cart])
 
   return (

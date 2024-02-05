@@ -38,7 +38,7 @@ const NavBar = () => {
                 </Menu>
                 <Spacer />
                     <Box p='6' bg='green.400'>
-                        <Link to={"/cart"}>
+                        <Link to={`/cart`}>
                             <CartWidget/>
                         </Link>
                     </Box>

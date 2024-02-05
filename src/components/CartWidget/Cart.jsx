@@ -33,14 +33,14 @@ const Cart = () => {
                 </Heading>
               </Stack>
               <CardFooter>
-                <Button colorScheme="red" onClick={() => eraseOne(item.id)}>
-                  Eliminar
+                <Button colorScheme="green" onClick={() => eraseOne(item.id)}>
+                  Agregar
                 </Button>
                 <Text fontSize="lg" fontWeight="bold" color="teal.500" ml={4}>
                   ¿Deseas modificar el Carrito?
                 </Text>
-                <Button colorScheme="green" onClick={() => increaseOne(item.id)} ml={4}>
-                  Agregar
+                <Button colorScheme="red" onClick={() => increaseOne(item.id)} ml={4}>
+                  Eliminar
                 </Button>
               </CardFooter>
             </Box>

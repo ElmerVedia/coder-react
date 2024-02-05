@@ -17,9 +17,9 @@ const Item = ({ id, nombre, categoria, imagen}) => {
                     </Stack>
                 </CardBody>
                 <CardFooter>
-                    <Link to={'/item/${id}'} >
+                    <Link to={`/item/${id}`} >
                         <Button>
-                            más detalles
+                            ver detalles
                         </Button>
                     </Link>
                 </CardFooter>
