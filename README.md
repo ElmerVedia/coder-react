@@ -13,4 +13,4 @@ He utilizado las siguientes Herramientas:
 - **Firebase:** Empleado para la gestión de datos. Se utiliza específicamente Firestore para la base de datos y funciones de almacenamiento
 - **React + Vite (JavaScript):** Base fundamental del proyecto, proporcionando una estructura eficiente y escalable para el desarrollo de la aplicación web
 
-![React-eComerce](https://github.com/ElmerVedia/coder-react/assets/142547474/2255af0d-b497-4738-ae5b-74b33ecc17e6)
+![tuAperitivo-react-js](https://github.com/ElmerVedia/coder-react/assets/142547474/3f0430da-5a21-41f4-9b2e-4ea805eb3efd)
