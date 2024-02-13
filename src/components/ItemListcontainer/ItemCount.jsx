@@ -1,11 +1,11 @@
-import { Button, ButtonGroup, IconButton, Center } from '@chakra-ui/react'
 import { useState, useContext } from 'react'
+import { Button, ButtonGroup, IconButton, Center } from '@chakra-ui/react'
 import { AddIcon, MinusIcon} from '@chakra-ui/icons'
 import { CartContext } from '../../context/CartContext'
 
 const ItemCount = ({id, nombre, precio, imagen}) => {
-    const [cart, setCart] = useContext(CartContext);
-    const [counter, setCounter] = useState(1);
+    const [cart, setCart] = useContext(CartContext)
+    const [counter, setCounter] = useState(1)
 
     const rest = () => {
         if (counter > 0) {
@@ -25,7 +25,7 @@ const ItemCount = ({id, nombre, precio, imagen}) => {
 
             if (alrdyIn) {
                 return cartAtm.map((item) => {
-                    if (then.id === id) {
+                    if (item.id === id) {
                         return{...item, stock: item.stock + counter}
                     }else{
                         return item

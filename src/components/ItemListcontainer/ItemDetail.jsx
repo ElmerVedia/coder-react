@@ -38,7 +38,7 @@ const ItemDetail = ({items}) => {
                                 <Text fontSize='2xl' color='blue' textAlign='center' fontFamily='customFont'>
                                     Categoría: {item.categoria}
                                 </Text>
-                                <Text fontSize='2xl' color='blue' textAlign='center' fontFamily='customFont'>
+                                <Text fontSize='2xl' color='black' textAlign='center' fontFamily='customFont'>
                                     Descripción: {item.descripcion}
                                 </Text>
                                 <Text fontSize='2xl' color='red' textAlign='center' fontFamily='customFont'>

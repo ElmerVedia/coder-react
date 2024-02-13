@@ -17,11 +17,11 @@ const CartWidget = () => {
     }
   }, [setCart]);
   useEffect(() => {
-    localStorage.setItem(`cart`, JSON.stringify(cart));
+    localStorage.setItem(`cart`, JSON.stringify(cart))
   }, [cart])
 
   return (
-    <Link to= "/Cart">
+    <Link to="/Cart">
       <div>
         <div>
           <GiShoppingCart />

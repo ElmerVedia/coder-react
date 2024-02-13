@@ -4,8 +4,8 @@ import { Container, Card, Stack, Heading, CardFooter, Divider, Box, Button, Imag
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-  
   const [cart, setCart, fullPrice, increaseOne, eraseOne, clearCart] = useContext(CartContext)
+  
   return (
     <Container maxW="xl" centerContent>
       <br />
@@ -29,7 +29,7 @@ const Cart = () => {
                   Precio: ${item.precio}
                 </Heading>
                 <Heading color="#778751" size="md">
-                  Cantidad: {item.stock}
+                  Cantidad: {item.stock}.-
                 </Heading>
               </Stack>
               <CardFooter>

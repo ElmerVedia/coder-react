@@ -2,8 +2,8 @@ import {createContext, useState} from "react"
 import Swal from "sweetalert2"
 
 export const CartContext = createContext(null)
+export const CartProvider = ( { children } ) => {
 
-export const CartProvider = ( {children} ) => {
   const [cart, setCart] = useState([])
 
   const clearCart = () => {
@@ -25,7 +25,7 @@ export const CartProvider = ( {children} ) => {
   const increaseOne = (itemId) => {
     const itemIndex = cart.findIndex((item) => item.id === itemId)
 
-    if(itemIndex !== 1) {
+    if (itemIndex !== -1) {
       const newCart = [...cart]
       newCart[itemIndex].stock++;
 
@@ -63,7 +63,7 @@ export const CartProvider = ( {children} ) => {
   }
 
   return (
-    <CartContext.Provider value = {[cart, setCart, fullPrice, eraseOne, increaseOne, clearCart]}>
+    <CartContext.Provider value = { [cart, setCart, fullPrice, eraseOne, increaseOne, clearCart] }>
       {children}
     </CartContext.Provider>
   )
