@@ -29,7 +29,7 @@ const Cart = () => {
                   Precio: ${item.precio}
                 </Heading>
                 <Heading color="#778751" size="md">
-                  Cantidad: {item.stock}.-
+                  Cantidad: {item.stock}
                 </Heading>
               </Stack>
               <CardFooter>
@@ -49,7 +49,7 @@ const Cart = () => {
         </Box>
       ))}
       <Heading color="#778751" size="xl" mt={4}>
-        Precio Final: ${fullPrice()}.-
+        Precio Final: ${fullPrice()}
       </Heading>
       <Button mt={4} colorScheme="teal" onClick={clearCart}>
         Vaciar Carrito
